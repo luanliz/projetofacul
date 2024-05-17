@@ -1,0 +1,91 @@
+/* Define a fonte padrão do corpo da página como "Roboto" */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estiliza o cabeçalho da página */
+.title-header {
+    display: flex; /* Define um contêiner flexível */
+    justify-content: center; /* Centraliza horizontalmente os itens */
+    align-items: center; /* Centraliza verticalmente os itens */
+    padding: 20px 0; /* Define o preenchimento superior e inferior */
+    color: #000; /* Define a cor do texto como preto */
+    font-size: 20px; /* Define o tamanho da fonte */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    padding: 10px 0; /* Define o preenchimento superior e inferior */
+}
+
+/* Define a estrutura de contêiner para colunas */
+.columns-container {
+    display: flex; /* Define um contêiner flexível */
+    flex-direction: row; /* Organiza as colunas em uma linha */
+}
+
+/* Estiliza os itens da lista */
+.my-list li {
+    margin-bottom: 5px; /* Adiciona margem inferior a cada item da lista */
+}
+
+/* Estiliza os botões do menu */
+.button-menu {
+    background-color: #00BFFF; /* Define a cor de fundo */
+    color: #fff; /* Define a cor do texto */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    border: none; /* Remove a borda */
+    padding: 10px 20px; /* Define o preenchimento interno */
+    cursor: pointer; /* Muda o cursor para indicar clicável */
+    border-radius: 10px; /* Arredonda os cantos */
+}
+
+/* Estiliza os botões do formulário */
+.button-form {
+    background-color: #66CDAA; /* Define a cor de fundo */
+    color: #fff; /* Define a cor do texto */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    border: none; /* Remove a borda */
+    padding: 10px 16px; /* Define o preenchimento interno */
+    cursor: pointer; /* Muda o cursor para indicar clicável */
+    border-radius: 10px; /* Arredonda os cantos */
+}
+
+/* Estiliza a coluna do perfil */
+.profile-column {
+    position: fixed; /* Fixa a posição na tela */
+    width: 20%; /* Define a largura */
+    padding: 10px; /* Define o preenchimento interno */
+}
+
+/* Estiliza a coluna do currículo */
+.curriculum-column {
+    margin-left: 25%; /* Adiciona margem à esquerda */
+}
+
+/* Estilizações para dispositivos com largura máxima de 600px */
+@media (max-width: 600px) {
+    .columns-container {
+        flex-direction: column; /* Muda a direção do flex para coluna */
+    }
+
+    .title-header {
+        font-size: 16px; /* Reduz o tamanho da fonte */
+        padding: 5px 0; /* Reduz o preenchimento superior e inferior */
+    }
+
+    .my-list li {
+        margin-bottom: 3px; /* Reduz a margem inferior dos itens da lista */
+    }
+
+    button {
+        padding: 5px 10px; /* Reduz o preenchimento interno dos botões */
+    }
+
+    .profile-column {
+        position: static; /* Define a posição como estática */
+        width: 100%; /* Define a largura como 100% */
+        padding: 0; /* Remove o preenchimento */
+    }
+
+    .curriculum-column {
+        margin-left: 0; /* Remove a margem à esquerda */
+    }
+}

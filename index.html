@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Define o conjunto de caracteres da página como UTF-8 -->
+        <meta charset="UTF-8">
+        
+        <!-- Configura a viewport para garantir que a página seja exibida corretamente em dispositivos móveis -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Inclui um arquivo JavaScript externo localizado no diretório raiz -->
+        <script src="/script.js"></script>
+        
+        <!-- Inclui um arquivo CSS externo localizado no diretório raiz para estilização -->
+        <link rel="stylesheet" href="/style.css">
+        
+        <!-- Importa a fonte "Roboto" do Google Fonts com a configuração para exibição rápida -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+        
+        <!-- Define o título da página -->
+        <title>Currículo do Luan Liz</title>
+    </head>
+    
+    <body>
+        <!-- Cabeçalho da página com o título principal -->
+        <div class="title-header">
+            <h1>Currículo do Luan Liz</h1>
+        </div>
+        
+        <!-- Contêiner principal para organizar as colunas -->
+        <div class="columns-container">
+            
+            <!-- Coluna do perfil pessoal -->
+            <div class="profile-column">
+                <div>
+                    <!-- Imagem de perfil -->
+                    <img src="/luan.jpg" style="width: 100%; height: 100%;">
+                    <!-- Nome e informações de contato -->
+                    <h3>Luan Liz</h3>
+                    <p>Javascript Full Stack Developer</p>
+                    <p>emaildoluan@email.com</p>
+                    <p>(11) 9999-9999</p>
+                    <!-- Botões de navegação para as diferentes seções do currículo -->
+                    <div style="display: flex; flex-direction: column; gap: 2px; margin-right: 20px;">
+                        <button class="button-menu" onclick="showAboutMe()">Sobre mim</button>
+                        <button class="button-menu" onclick="showMyProjects()">Portfólio</button>
+                        <button class="button-menu" onclick="showAcademicExperiences()">Experiências acadêmicas</button>
+                        <button class="button-menu" onclick="showProfessionalExperiences()">Experiências profissionais</button>
+                        <button class="button-menu" onclick="showTalkToMe()">Fale comigo</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Coluna principal do currículo -->
+            <div class="curriculum-column">
+                
+                <!-- Seção "Sobre Mim" -->
+                <div id="about-me">
+                    <h1>Sobre mim</h1>
+                    <p>Apaixonado por desafios. Depois de mais de 10 anos de experiência na área comercial com vendas inbound e outbound, no ano de 2023 iniciei uma transição de carreira profissional para a área de tecnologia, atuando como desenvolvedor de software.
+                    Meus hobbies são o futebol e a natação. Sou um entusiasta da tecnologia e estou sempre em busca de novos conhecimentos.</p>
+                </div>
+                
+                <!-- Seção "Portfólio" -->
+                <div id="my-portfolio">
+                    <h1>Portfólio</h1>
+                    <ul class="my-list">
+                        <!-- Links para projetos do portfólio -->
+                        <li><a href="https://github.com/luanliz/lenapersonalizados" target="_blank">Lena Personalizados</a></li>
+                        <li><a href="https://github.com/luanliz/lizimoveis" target="_blank">Liz Imóveis</a></li>
+                        <li><a href="https://github.com/luanliz/dietapp_fepe" target="_blank">Diet App Web</a></li>
+                        <li><a href="https://github.com/luanliz/pingpong" target="_blank">Ping-Pong Game</a></li>
+                        <li><a href="https://luanliz.github.io/presentation/" target="_blank">Apresentação pessoal</a></li>
+                        <li><a href="https://github.com/luanliz/lamp-on-off" target="_blank">Lâmpada On/Off</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Seção "Experiências Acadêmicas" -->
+                <div id="my-academic-experiences">
+                    <h1>Experiências acadêmicas</h1>
+                    <ul class="my-list">
+                        <!-- Lista de experiências acadêmicas -->
+                        <li>(2022-2024) Tecnólogo em Análise e Desenvolvimento de Sistemas</li>
+                        <li>(2012-2013) Tecnólogo em Processos Gerenciais</li>
+                    </ul>
+                </div>
+                
+                <!-- Seção "Experiências Profissionais" -->
+                <div id="my-professional-experiences">
+                    <h1>Experiências profissionais</h1>
+                    <h4>(2023 - até o momento) Desenvolvedor de Software na Empresa Econdos Sistemas</h4>
+                    <ul class="my-list">
+                        <!-- Lista de atividades profissionais -->
+                        <li>Desenvolvimento de aplicações web com AngularJS</li>
+                        <li>Desenvolvimento de aplicações mobile com Ionic</li>
+                        <li>Desenvolvimento de aplicações backend com NodeJS, Express e MongoDB</li>
+                        <li>Metodologias ágeis</li>
+                        <li>Contribuição com ideias para novos projetos e projetos já existentes</li>
+                        <li>Participações em Daily</li>
+                        <li>Code-reviews</li>
+                    </ul>
+                    <h4>(2022 - mar/2023) Desenvolvedor de Software na FEPE - Fundação Ecumênica de Proteção ao Excepcional</h4>
+                    <ul class="my-list">
+                        <!-- Lista de atividades profissionais anteriores -->
+                        <li>Desenvolvimento de páginas web e aplicativos</li>
+                        <li>Desenvolvimento e manutenção de aplicações web e mobile</li>
+                        <li>Desenvolvimento de funcionalidades no Front-End e Back-End</li>
+                        <li>Desenvolver e alimentar integrações</li>
+                    </ul>
+                </div>
+                
+                <!-- Seção "Fale Comigo" -->
+                <div id="talk-to-me">
+                    <h1>Fale comigo</h1>
+                    <!-- Formulário de contato -->
+                    <form id="talk-to-me-form" onsubmit="event.preventDefault(); submitForm();">
+                        <label for="name">Nome:</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br>
+                        <label for="message">Mensagem:</label><br>
+                        <textarea id="message" name="message" rows="10" cols="50" placeholder="Deixe sua mensagem" required></textarea><br>
+                        <!-- Botão de envio do formulário -->
+                        <button class="button-form" type="submit" value="Enviar">Enviar</button>
+                    </form>       
+                </div>
+            </div>
+        </div>
+    </body>
+    
+</html>
